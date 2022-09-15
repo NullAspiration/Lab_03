@@ -13,7 +13,7 @@ public class Program
             option = Int32.Parse(Console.ReadLine());
             MenuChoice(option);
 
-            Console.WriteLine("\nHit Enter to return to menu...");
+            Console.WriteLine("\nPress <Enter> to return to option menu...");
             Console.ReadLine();
             Console.Clear();
         } while (option != 0);
@@ -21,12 +21,12 @@ public class Program
 
     public static void DisplayMenu()
     {
-        Console.WriteLine("------ Menu ------");
-        Console.WriteLine("1. Create a new Person");
-        Console.WriteLine("2. View all people");
-        Console.WriteLine("5. Create and View Random SSN");
-        Console.WriteLine("0. Exit");
-        Console.WriteLine("------------------");
+        Console.WriteLine("[|||||||||||| Menu |||||||||||||]");
+        Console.WriteLine("(| 1. Create a new Person      |)");
+        Console.WriteLine("(| 2. View all people          |)");
+        Console.WriteLine("(| 5. Create & View Random SSN |)");
+        Console.WriteLine("(| 0. Exit                     |)");
+        Console.WriteLine("[|||||||||||||||||||||||||||||||]");
     }
 
     public static void MenuChoice(int option)
@@ -48,10 +48,10 @@ public class Program
                 Console.WriteLine(rando.SSN);
                 break;
             case 0:
-                Console.WriteLine("See ya!");
+                Console.WriteLine("Process Killed...");
                 break;
             default:
-                Console.WriteLine("Invalid option. Can you read?");
+                Console.WriteLine("Invalid option. Please make a valid selection");
                 break;
         }
     }
