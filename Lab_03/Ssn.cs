@@ -29,7 +29,6 @@ namespace Lab_03
             return regulatedInvalidSSN;
 
         }
-
         public override string ToString()
         {
             string safeSocialSecurityNumber = Number;
