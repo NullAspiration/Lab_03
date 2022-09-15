@@ -10,7 +10,9 @@ public class Program
         do
         {
             DisplayMenu();
+#pragma warning disable CS8604 // Possible null reference argument.
             option = Int32.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Possible null reference argument.
             MenuChoice(option);
 
             Console.WriteLine("\nPress <Enter> to return to option menu...");

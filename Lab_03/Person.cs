@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-
-namespace Lab_03
+﻿namespace Lab_03
 {
     internal class Person
     {
@@ -22,7 +19,9 @@ namespace Lab_03
             FirstName = arrayOfFirstNames[rand.Next(arrayOfFirstNames.Length)];
 
             var lastArray = Lab_03.LastName.GetValues(typeof(LastName));
+#pragma warning disable CS8605 // Unboxing a possibly null value.
             var value = (LastName)lastArray.GetValue(rand.Next(lastArray.Length));
+#pragma warning restore CS8605 // Unboxing a possibly null value.
             this.LastName = value.ToString();
 
             DateTime dateToday = DateTime.Now;
